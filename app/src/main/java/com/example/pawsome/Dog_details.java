@@ -1,9 +1,13 @@
 package com.example.pawsome;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.graphics.Color;
+import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.TestLooperManager;
+import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
@@ -16,6 +20,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 
 import com.squareup.picasso.Picasso;
+import com.squareup.picasso.Target;
 
 import org.w3c.dom.Text;
 
@@ -69,7 +74,23 @@ public class Dog_details extends AppCompatActivity {
                   for(Breed breed:breedList) {
                       if(breed.name.equals(Recyclerview_adapter.check)) {
                           text_name.setText("Name:-" + breed.name);
-                          Picasso.get().load(breed.image.getUrl()).resize(409, 300).into(imageView);
+                          Picasso.get().load(breed.image.getUrl()).resize(409, 300).into(new Target() {
+                              @Override
+                              public void onBitmapLoaded(Bitmap bitmap, Picasso.LoadedFrom from) {
+                                  details= MediaStore.Images.Media.insertImage(getContentResolver(),bitmap,"IMG"+System.currentTimeMillis(),null);
+                                  imageView.setImageBitmap(bitmap);
+                              }
+
+                              @Override
+                              public void onBitmapFailed(Exception e, Drawable errorDrawable) {
+
+                              }
+
+                              @Override
+                              public void onPrepareLoad(Drawable placeHolderDrawable) {
+
+                              }
+                          });
                           if (breed.bred_for != null)
                               text_bred_for.setText(breed.bred_for);
                           else
@@ -135,7 +156,12 @@ public class Dog_details extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if(item.getItemId()==R.id.share){
-
+            Uri uri=Uri.parse(details);
+          Intent intent=new Intent(Intent.ACTION_SEND);
+          intent.setType("images/jpeg");
+          intent.putExtra(Intent.EXTRA_STREAM,uri);
+          intent.putExtra(Intent.EXTRA_TEXT,text_name.getText());
+          startActivity(Intent.createChooser(intent,"share"));
         }
         return super.onOptionsItemSelected(item);
     }
