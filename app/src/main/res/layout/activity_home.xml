@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/wall"
+    style="@style/Theme.Home">
+
+    <TextView
+        android:id="@+id/pawsome"
+        android:layout_width="match_parent"
+        android:layout_height="108dp"
+        android:layout_marginBottom="88dp"
+        android:fontFamily="@font/bigelow_rules"
+        android:gravity="center"
+        android:text="Pawsome"
+        android:textColor="@color/white"
+        android:textSize="100sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/pawsome_text"
+        android:layout_width="match_parent"
+        android:layout_height="31dp"
+        android:layout_marginBottom="160dp"
+        android:fontFamily="@font/petrona"
+        android:gravity="center"
+        android:letterSpacing="0.55"
+        android:text="Exploring new Dogs"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pawsome"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/pawsome_image"
+        android:layout_width="412dp"
+        android:layout_height="533dp"
+        app:layout_constraintBottom_toTopOf="@+id/pawsome"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/dogo" />
+</android.support.constraint.ConstraintLayout>

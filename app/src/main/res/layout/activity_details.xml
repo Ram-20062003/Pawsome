@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#c4c7cc"
+    tools:context=".Dog_details">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/image_pos"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginTop="-6dp"
+            app:srcCompat="@drawable/ic_launcher_background"
+            tools:ignore="VectorDrawableCompat" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="TextView"
+            android:textColor="@color/black"
+            android:fontFamily="@font/petrona"
+            android:textSize="30sp" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+        android:layout_marginEnd="10dp"
+        android:stretchColumns="1">
+            <TableRow>
+
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="1"
+                    android:fontFamily="@font/petrona"
+                    android:text="Bred-for"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/black"
+                    android:background="#d7e0da"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/petrona"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:background="#ebf7ee"
+                    android:layout_marginTop="5dp"
+                    android:layout_column="2"
+                    android:id="@+id/text_bred_for" />
+
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/petrona"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="5dp"
+                    android:layout_column="1"
+                    android:background="#d7e0da"
+                    android:text="Breed-Group"
+                    />
+
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/petrona"
+                    android:layout_marginTop="5dp"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:background="#ebf7ee"
+                    android:layout_column="2"
+                    android:id="@+id/text_breed_grp" />
+            </TableRow>
+            <TableRow>
+
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/petrona"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:layout_column="1"
+                    android:background="#d7e0da"
+                    android:text="Description"
+                    />
+
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/petrona"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:background="#ebf7ee"
+                    android:layout_column="2"
+                    android:id="@+id/text_description" />
+
+            </TableRow>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/petrona"
+                    android:textSize="18sp"
+                    android:background="#adb3af"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:layout_column="1"
+                    android:text="HEIGHT"
+                    />
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/petrona"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:background="#d7e0da"
+                    android:layout_column="1"
+
+                    android:text="Imperial"
+                    android:gravity="center"
+                    />
+
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/petrona"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:background="#ebf7ee"
+                    android:layout_column="2"
+                    android:id="@+id/text_imperial_height" />
+
+            </TableRow>
+            <TableRow>
+
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/petrona"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:background="#d7e0da"
+                    android:layout_column="1"
+                    android:text="Metric"
+                    android:gravity="center"
+                    />
+
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/petrona"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:background="#ebf7ee"
+                    android:layout_column="2"
+                    android:id="@+id/text_metric_height" />
+
+            </TableRow>
+            <TableRow>
+
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/petrona"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:background="#d7e0da"
+                    android:layout_column="1"
+                    android:text="Life_span"
+                    />
+
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/petrona"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:background="#ebf7ee"
+                    android:layout_column="2"
+                    android:id="@+id/text_life_span" />
+
+            </TableRow>
+            <TableRow>
+
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/petrona"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:background="#d7e0da"
+                    android:layout_column="1"
+                    android:text="origin"
+                    />
+
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/petrona"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:background="#ebf7ee"
+                    android:layout_column="2"
+                    android:id="@+id/text_origin" />
+
+            </TableRow>
+            <TableRow>
+
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/petrona"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:background="#d7e0da"
+                    android:layout_column="1"
+                    android:text="Temperament"
+                    />
+
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/petrona"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:background="#ebf7ee"
+                    android:layout_column="2"
+                    android:id="@+id/text_temperament" />
+
+            </TableRow>
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/petrona"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:background="#adb3af"
+                    android:gravity="center"
+                    android:layout_column="1"
+                    android:text="WEIGHT"
+                    />
+            <TableRow>
+
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/petrona"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:layout_column="1"
+                    android:background="#d7e0da"
+
+                    android:text="Imperial"
+                    android:gravity="center"
+                    />
+
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/petrona"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:background="#ebf7ee"
+                    android:layout_column="2"
+                    android:id="@+id/text_imperial_weight" />
+
+            </TableRow>
+            <TableRow>
+
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/petrona"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:layout_column="1"
+                    android:background="#d7e0da"
+                    android:text="Metric"
+                    android:gravity="center"
+                    />
+
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/petrona"
+                    android:textSize="18sp"
+                    android:background="#ebf7ee"
+                    android:textColor="@color/black"
+                    android:layout_column="2"
+                    android:id="@+id/text_metric_weight" />
+
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+</ScrollView>
+</LinearLayout>
