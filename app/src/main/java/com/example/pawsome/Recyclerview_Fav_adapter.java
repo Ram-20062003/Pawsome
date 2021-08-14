@@ -5,6 +5,7 @@ import android.content.Context;
 import android.os.AsyncTask;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.helper.ItemTouchHelper;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -96,9 +97,11 @@ public class Recyclerview_Fav_adapter extends RecyclerView.Adapter<Recyclerview_
             textView=itemView.findViewById(R.id.textView2);
             button_fav=itemView.findViewById(R.id.like);
             button_un_fav=itemView.findViewById(R.id.unlike);
+
+
         }
     }
-    class Delete_Dog extends AsyncTask<String,Void,Void>{
+     class Delete_Dog extends AsyncTask<String,Void,Void>{
 
         @Override
         protected Void doInBackground(String... voids) {
